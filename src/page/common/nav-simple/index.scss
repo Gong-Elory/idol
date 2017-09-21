@@ -1,0 +1,21 @@
+/*
+* @Author: Elory
+* @Date:   2017-09-20 21:30:55
+* @Last Modified by:   Elory
+* @Last Modified time: 2017-09-20 21:53:34
+*/
+@import '../variables.scss';
+
+.nav-simple{
+	height: 60px;
+	width: 100%;
+	line-height: 60px;
+	border-bottom: 1px solid #ddd;
+	background-color: #fff;
+
+	.logo{
+		font-size: 26px;
+		font-weight: 900;
+		color: $btnDefaultColor;
+	}
+}

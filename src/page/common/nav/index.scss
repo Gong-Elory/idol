@@ -1,0 +1,34 @@
+/*
+* @Author: Elory
+* @Date:   2017-09-20 22:06:34
+* @Last Modified by:   Elory
+* @Last Modified time: 2017-09-20 22:12:01
+*/
+.nav{
+	background: #eee;
+	height: 30px;
+	line-height: 30px;
+	
+	//导航用户部分
+	.user{
+		float: left;
+
+		.link{
+			margin-right: 5px;
+		}
+
+		&.logined{
+			display: none;
+		}
+	}
+	
+	//导航的导航条
+	.nav-list{
+		float: right;
+
+		.nav-item{
+			display: inline-block;
+			margin-left: 5px;
+		}
+	}
+}

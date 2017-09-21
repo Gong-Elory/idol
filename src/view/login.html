@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
-<%= require('html-loader!./layout/html-head.html') %>
+<head>
+	<%= require('html-loader!./layout/header-common.html') %>
+	<title><%= htmlWebpackPlugin.options.title%> - IDOL</title>
+</head>
 <body>
-	
+
+<%= require('html-loader!./layout/footer-common.html') %>	
 </body>
 </html>

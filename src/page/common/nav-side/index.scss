@@ -1,0 +1,33 @@
+/*
+* @Author: Elory
+* @Date:   2017-09-20 21:30:55
+* @Last Modified by:   Elory
+* @Last Modified time: 2017-09-21 12:50:03
+*/
+@import '../variables.scss';
+//侧边栏导航
+.nav-side{
+	float: left;
+	width: 130px;
+	min-height: 100px;
+
+	.nav-item{
+		line-height: 25px;
+		font-size: 14px;
+		&.active{
+			.link{
+				color: $btnDefaultColor;
+			}
+		}
+
+		.link{
+			color: #888;
+		}
+	}
+}
+
+// 右侧内容区域
+.content.with-nav{
+	float: left;
+	width: 950px;
+}
