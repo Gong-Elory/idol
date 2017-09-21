@@ -1,0 +1,102 @@
+/*
+* @Author: Elory
+* @Date:   2017-09-20 20:43:34
+* @Last Modified by:   Elory
+* @Last Modified time: 2017-09-21 10:03:04
+*/
+
+//全局颜色
+
+
+@import 'variables.scss';
+*{	
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: #f6f6f6;
+	font: 12px/1.5 tahoma,arial,Microsoft YaHei,sans-serif;
+}
+li{
+	list-style: none;
+}
+img{
+	display: block;
+	border: none;
+}
+label{
+	cursor: pointer;
+}
+input[type='checkbox']{
+	cursor: pointer;
+}
+
+input{
+	outline: none;
+}
+.wid{
+	width: 1080px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+// .large .wid{
+// 	width: 1600px;
+// }
+
+/**
+ * 全局通用样式
+ */
+.hide{
+	display: none;
+}
+
+// link
+.link{
+	color: #999;
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover{
+		color: $linkDefaultColor;
+	}
+}
+
+.link-text{
+	color: #999;
+	text-decoration: none;
+}
+
+//btn
+.btn{
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px;
+	vertical-align: middle;
+	border: none;
+	background: $btnDefaultColor;
+	color: #fff;
+	font-size: 17px;
+	cursor: pointer;
+	text-decoration: none;
+	outline: none;
+}
+
+.btn-mini{
+	height: 25px;
+	line-height: 25px;
+	font-size: 12px;
+	padding: 0 10px;
+}
+
+// loading
+.loading{
+	display: block;
+	// background: url(../../image/icon/loading.gif) no-repeat;
+	width: 10px;
+	height: 10px;
+}

@@ -1,0 +1,29 @@
+/*
+* @Author: Elory
+* @Date:   2017-09-21 12:52:39
+* @Last Modified by:   Elory
+* @Last Modified time: 2017-09-21 13:16:36
+*/
+.page-wrap{
+	background: #fff;
+	padding: 30px 0;
+	margin-top: 20px;
+	text-align: center;
+}
+
+
+.result-con{
+	display: none;
+	.result-title{
+		color: #555;
+	}
+
+	.result-content{
+		margin-top: 20px;
+		.link{
+			padding: 5px 10px;
+			border: 1px solid #ccc;
+			margin: 0 5px;
+		}
+	}
+}
