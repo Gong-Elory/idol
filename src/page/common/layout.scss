@@ -2,7 +2,7 @@
 * @Author: Elory
 * @Date:   2017-09-20 20:43:34
 * @Last Modified by:   Elory
-* @Last Modified time: 2017-09-21 10:03:04
+* @Last Modified time: 2017-09-21 13:29:50
 */
 
 //全局颜色
@@ -36,11 +36,33 @@ input[type='checkbox']{
 input{
 	outline: none;
 }
+
 .wid{
 	width: 1080px;
 	margin: 0 auto;
 	position: relative;
 	overflow: hidden;
+}
+
+/* panel */
+.panel{
+	padding: 30px;
+	margin-bottom: 10px;
+	background: #fff;
+
+	.panel-title{
+		padding: 10px;
+		font-size: 14px;
+		color: #666;
+		font-weight: 900;
+		border-bottom: 1px solid #eee;
+	}
+
+	.panel-body{
+		padding: 10px;
+		overflow: hidden;
+
+	}
 }
 
 // .large .wid{
@@ -99,4 +121,23 @@ input{
 	// background: url(../../image/icon/loading.gif) no-repeat;
 	width: 10px;
 	height: 10px;
+}
+
+//解决出现滚动条之后，页面抖动问题
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
 }
