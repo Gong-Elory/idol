@@ -25,7 +25,7 @@ var nav = {
 		});
 		//注册点击事件
 		$('.js-regis').click(function(){
-			window.location.href = './register.html';
+			window.location.href = './user-register.html';
 		});
 		//退出点击事件
 		$('.js-logout').click(function(){
@@ -36,7 +36,7 @@ var nav = {
 				//重新加载的时候会再次向后台请求数据，验证是否登录
 				window.location.reload();
 			},function(errMsg){
-				_req.errorTips(errMsg)
+				// _req.errorTips(errMsg)
 			});
 		})
 
@@ -48,7 +48,7 @@ var nav = {
 								.find('.username').text(res.username);
 			
 			},function(errMsg){
-				_req.errorTips(errMsg)
+				// _req.errorTips(errMsg)
 			});
 	},
 	loadCartCount: function(){
@@ -60,5 +60,5 @@ var nav = {
 	}
 }
 
-// module.exports = nav.init();
-module.exports = nav;
+module.exports = nav.init();
+// module.exports = nav;

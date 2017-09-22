@@ -2,7 +2,7 @@
 * @Author: Elory
 * @Date:   2017-09-20 18:28:35
 * @Last Modified by:   Elory
-* @Last Modified time: 2017-09-20 20:42:17
+* @Last Modified time: 2017-09-21 14:04:08
 */
 'use strict';
 var Hogan = require('hogan');
@@ -10,8 +10,9 @@ var conf = {
 	serverHost: ''
 };
 var _req = {
-	_self : this,
+	
 	request: function(param){
+		var _self = this;
 		$.ajax({
 			type: param.method || 'get',
 			url: param.url || '',
@@ -19,15 +20,15 @@ var _req = {
 			data: param.data || '',
 			success: function(res){
 				//请求成功
-				if(1 === res.status){
-					typeof param.success === 'function' && param.success(res.data);
+				if(0 === res.status){
+					typeof param.success === 'function' && param.success(res.data,res.msg);
 				}
 				//没有登录态
 				else if(10 === res.status){
 					_self.doLogin();
 				}
 				//请求数据错误
-				else if(0 === res.status){
+				else if(1 === res.status){
 					typeof param.error === 'function' && param.error(res.msg);
 				}
 			},
@@ -38,7 +39,7 @@ var _req = {
 	},
 
 	doLogin: function(){
-		window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+		window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
 	},
 	//获取服务器地址
 	getServerUrl: function(path){
@@ -47,7 +48,6 @@ var _req = {
 	getUrlParam: function(name){
 		var reg = new RegExp('(^|&)'+ name + '=([^&]*)(&|$)');
 		var result = window.location.search.substr(1).match(reg);
-		console.log(result);
 		return result ? decodeURIComponent(result[2]) :　null;
 	},
 	//渲染HTML模板
@@ -72,11 +72,11 @@ var _req = {
 
 		//手机号验证
 		if('phone' === type){
-			return /^1\d{10}$/.test(value);
+			return /^1\d{10}$/.test(val);
 		}
 
 		if('email' === type){
-			return /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/.test(value);
+			return /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/.test(val);
 		}
 	},
 	goHome: function(){
