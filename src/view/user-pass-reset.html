@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%= require('html-loader!./layout/header-common.html') %>
+    <title><%= htmlWebpackPlugin.options.title%> - IDOL</title>
+</head>
+<body>
+<%= require('html-loader!./layout/nav-simple.html') %>
+<div class="page-wrap">
+    <div class="wid">
+        <div class="user-con">
+            <div class="user-title">找回密码</div>
+            <div class="user-box">
+                <div class="error-item">
+                    <i class="fa fa-minus-circle error-icon"></i>
+                    <p class="error-msg">error</p>
+                </div>
+                <div class="step-con step-username">
+                    <p class="user-item-text"><span class="step-tips">step: 1/3</span>输入用户名</p>
+                    <div class="user-item">
+                        <label for="username" class="user-label">
+                            <i class="fa fa-user"></i>
+                        </label>
+                        <input type="text" class='user-content' id='username' placeholder="请输入用户名" autocomplete="off">
+                    </div>
+                    <a class="btn btn-submit" id="submit-username" >下一步</a>
+                </div>
+                <div class="step-con step-question">
+                    <p class="user-item-text"><span class="step-tips">step: 2/3</span>密码验证问题是:<span class="question"></span></p>
+                    <div class="user-item">
+                        <label for="userpassword" class="user-label">
+                            <i class="fa fa-key"></i>
+                        </label>
+                        <input type="password" class='user-content' id='answer' placeholder="请输入答案" autocomplete="off">
+                    </div>
+                    <a class="btn btn-submit" id="submit-question" >下一步</a>
+                </div>
+                <div class="step-con step-newpass">
+                    <p class="user-item-text"><span class="step-tips">step: 3/3</span>请输入新密码：</p>
+                    <div class="user-item">
+                        <label for="usernewpass" class="user-label">
+                            <i class="fa fa-lock"></i>
+                        </label>
+                        <input type="password" class='user-content' id='usernewpass' placeholder="请输入新密码" autocomplete="off">
+                    </div>
+                    <a class="btn btn-submit" id="submit-newpass" >确定修改</a>
+                </div>
+                <div class="link-item">
+                    <a href="./user-login.html" class="link user-l" target="_blank">返回登录>></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%= require('html-loader!./layout/footer-common.html') %>   
+</body>
+</html>

@@ -12,6 +12,7 @@ var _req = require('util/idol_common_tools.js');
 var header = {
 	init: function(){
 		this.bindEvent();
+		this.onLoad();
 	},
 	onLoad: function(){
 		var keyword = _req.getUrlParam('keyword');

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%= require('html-loader!./layout/header-common.html') %>
+<title><%= htmlWebpackPlugin.options.title%> - IDOL</title>
+</head>
+<body>
+<%= require('html-loader!./layout/nav.html') %>	
+<%= require('html-loader!./layout/header.html') %>
+<div class="crumb">
+	<div class="wid">
+		<div class="crumb-con">
+			<a href="./index.html" class="link">IDOL</a>
+			<span>></span>
+			<span class="link-text"><%= htmlWebpackPlugin.options.title%></span>
+		</div>
+	</div>
+</div>
+<div class="page-wrap wid">
+	<%= require('html-loader!./layout/nav-side.html') %>
+	<div class="content with-nav">
+		<div class="panel">
+			<div class="panel-title">修改密码</div>
+			<div class="panel-body">
+				<div class="form-line">
+				    <span class="label">原密码：</span>
+				    <input class="text" id="oldpass"  type="password" autocomplete="off" />
+				</div>
+				<div class="form-line">
+				    <span class="label">新密码：</span>
+				    <input class="text" id="newpass" type="password" autocomplete="off" />
+				</div>
+				<div class="form-line">
+				    <span class="label">确认密码：</span>
+				    <input class="text" id="passconfirm" type="password" autocomplete="off" />
+				</div>
+				<span class="btn btn-submit" >提交</span>
+			</div>
+		</div>
+	</div>
+</div>
+<%= require('html-loader!./layout/footer-common.html') %>	
+</body>
+</html>

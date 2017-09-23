@@ -8,6 +8,15 @@ var _cart = {
 			success: resolve,
 			error: reject
 		})
+	},
+	addToCart: function(productInfo,resolve,reject){
+		_req.request({
+			url: _req.getServerUrl('/cart/add.do'),
+			data: productInfo,
+			method: 'POST',
+			success: resolve,
+			error: reject
+		})
 	}
 }
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<%= require('html-loader!./layout/header-common.html') %>
+	<title><%= htmlWebpackPlugin.options.title%> - IDOL</title>
+</head>
+<body>
+<%= require('html-loader!./layout/nav-simple.html') %>
+<div class="page-wrap">
+    <div class="wid">
+        <div class="user-con">
+            <div class="user-title">用户登录</div>
+            <div class="user-box">
+                <div class="error-item">
+                    <i class="fa fa-minus-circle error-icon"></i>
+                    <p class="error-msg">error</p>
+                </div>
+                <div class="user-item">
+                    <label for="username" class="user-label">
+                        <i class="fa fa-user"></i>
+                    </label>
+                    <input type="text" class='user-content' id='username' placeholder="请输入用户名" autocomplete="off">
+                </div>
+                <div class="user-item">
+                    <label for="userpassword" class="user-label">
+                        <i class="fa fa-lock"></i>
+                    </label>
+                    <input type="password" class='user-content' id='password' placeholder="请输入密码" autocomplete="off">
+                </div>
+                <a class="btn btn-submit" id="submit" data-ing="正在登录...">登&nbsp;&nbsp;录</a>
+                <div class="link-item">
+                    <a href="./user-pass-reset.html" class="link user-l" target="_blank">忘记密码</a><a href="./user-register.html" class="link user-l" target="_blank">免费注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%= require('html-loader!./layout/footer-common.html') %>	
+</body>
+</html>

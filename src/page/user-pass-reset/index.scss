@@ -1,0 +1,103 @@
+@import '../common/variables.scss';
+
+.page-wrap{
+	padding: 40px 0;
+}
+
+.user-con{
+	position: relative;
+	width: 400px;
+	background: #fff;
+	margin: 0 auto;
+
+	.user-title{
+		text-align: center;
+		padding: 10px 0;
+		border-bottom: 1px solid #ddd;
+		font-size: 18px;
+		font-weight: 900;
+		color: #666;
+	}
+
+	.user-box{
+		padding: 20px;
+		//错误提示
+		.error-item{
+			display: none;
+			position: relative;
+			padding: 4px 0 4px 40px;
+			margin-bottom: 10px;
+			border: 1px solid #f00;
+			color: #f00;
+			background-color: #fde9e9;
+		}
+
+		.error-icon{
+			position: absolute;
+			left: 14px;
+			top: 50%;
+			margin-top: -7px;
+			font-size: 14px;
+		}
+	}
+
+	.user-item{
+		position: relative;
+		margin-bottom: 20px;
+		height: 36px;
+
+		.user-label{
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 40px;
+			line-height: 36px;
+			height: 36px;
+			font-size: 18px;
+			background-color: #e5e5e5;
+			color: #b5b5b5;
+			text-align: center;
+		}
+
+		.user-content{
+			padding:10px 0 10px 50px;
+			width: 360px;
+			height: 36px;
+			border: 1px solid #e5e5e5;
+		}
+	}
+
+	.btn-submit{
+		width: 100%;
+		height: 36px;
+		line-height: 36px;
+		text-align: center;
+		font-weight: 500;
+	}
+
+	.link-item{
+		text-align: right;
+		margin-top: 10px;
+
+		.link{
+			margin-left: 10px;
+		}
+	}
+/* 输入框提示信息 */
+	.user-item-text{
+		margin-bottom: 10px;
+		font-size: 14px;
+	}
+	
+	.step-con{
+		display: none;
+	}
+
+	.step-tips{
+		margin-right: 10px;
+		color: #e08e28;
+		font-weight: 900;
+		
+	}
+}

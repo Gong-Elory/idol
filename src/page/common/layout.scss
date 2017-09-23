@@ -117,10 +117,11 @@ input{
 
 // loading
 .loading{
+	margin: 0 auto;
 	display: block;
-	// background: url(../../image/icon/loading.gif) no-repeat;
-	width: 10px;
-	height: 10px;
+	background: url(../../image/icon/loading.gif) no-repeat;
+	width: 115px;
+	height: 116px;
 }
 
 //解决出现滚动条之后，页面抖动问题
