@@ -72,8 +72,8 @@ var page = {
 				count: $('.p-count').val()
 			},function(res){
 				window.location.href ='./result.html?type=cart-add'
-			},function(){
-				_mm.errorTips(errMsg);
+			},function(errMsg){
+				_req.errorTips(errMsg);
 			})
 		})
 

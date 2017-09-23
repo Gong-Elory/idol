@@ -2,7 +2,7 @@
 * @Author: Elory
 * @Date:   2017-09-20 13:43:15
 * @Last Modified by:   Elory
-* @Last Modified time: 2017-09-21 14:07:50
+* @Last Modified time: 2017-09-23 10:46:15
 */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -26,6 +26,7 @@ var config = {
 		'index': ['./src/page/index/index.js'],
 		'list': ['./src/page/list/index.js'],
 		'detail': ['./src/page/detail/index.js'],
+		'cart': ['./src/page/cart/index.js'],
 		'user-login':['./src/page/user-login/index.js'],
 		'user-center':['./src/page/user-center/index.js'],
 		'user-center-update':['./src/page/user-center-update/index.js'],
@@ -81,6 +82,7 @@ var config = {
 		getHtmlConfig('user-center-update',"修改个人信息"),
 		getHtmlConfig('index',"首页"),
 		getHtmlConfig('detail',"商品详情页"),
+		getHtmlConfig('cart',"购物车"),
 		getHtmlConfig('list',"商品列表页"),
 		getHtmlConfig('result',"操作结果"),
 		getHtmlConfig('user-register',"用户注册"),

@@ -2,7 +2,7 @@
 * @Author: Elory
 * @Date:   2017-09-20 20:43:34
 * @Last Modified by:   Elory
-* @Last Modified time: 2017-09-21 13:29:50
+* @Last Modified time: 2017-09-23 13:29:45
 */
 
 //全局颜色
@@ -141,4 +141,21 @@ html {
 body {
   width: 100vw;
   overflow: hidden;
+}
+
+/* 全局盒子 */
+.page-wrap{
+	margin-bottom: 30px;
+}
+
+/* 错误提示信息 */
+.err-tip{
+	height: 60px;
+	line-height: 60px;
+	color: $errtipsFontColor;
+	font-size: 16px;
+	font-weight: 900;
+	text-align: center;
+	background: #eee;
+	margin-bottom: 20px;
 }
