@@ -2,7 +2,7 @@
 * @Author: Elory
 * @Date:   2017-09-23 10:46:53
 * @Last Modified by:   Elory
-* @Last Modified time: 2017-09-23 16:10:21
+* @Last Modified time: 2017-09-23 16:48:04
 */
 'use strict';
 require('./index.scss');
@@ -28,7 +28,6 @@ var page = {
 		$('.page-wrap').on('click','.cart-select',function(){
 			var $this = $(this);
 			var productId = $this.parents('.cart-table').data('product-id');
-			console.log(productId);
 			//判断选中状态
 			if($this.is(':checked')){
 				_cart.selectProduct(productId,function(res){
@@ -131,7 +130,7 @@ var page = {
 		$('.page-wrap').on('click','.btn-submit',function(){
 			console.log(_this.data.cartInfo);
 			if(_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0){
-				window.location.href = './confrim.html';
+				window.location.href = './order-confirm.html';
 			}else{
 				_req.errorTips('您还没有选中任何商品');
 			}

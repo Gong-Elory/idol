@@ -32,7 +32,6 @@ var page = {
 		_prd.getProductDetail(this.data.productId,function(res){
 			_this.filter(res);
 			_this.data.detailInfo = res;
-			console.log(res);
 			html = _req.renderHtml(template,res);
 			$pagewrap.html(html);
 		},function(errMsg){

@@ -1,0 +1,239 @@
+/*
+* @Author: Elory
+* @Date:   2017-09-23 16:40:43
+* @Last Modified by:   Elory
+* @Last Modified time: 2017-09-23 17:18:27
+*/
+@import "../common/variables.scss";
+/* 地址部分样式 */
+.address-item{
+	width: 210px;
+	float: left;
+	padding: 10px 20px;
+	border: 3px dashed #ccc;
+	margin: 20px 20px 0 20px;
+	cursor: pointer;
+	&:hover{
+		background: #eee;
+
+		.address-opr{
+			visibility: visible;
+		}
+	}
+
+	&.active{
+		border: 3px dashed $hoverAddrBorderColor;
+	}
+	.address-title{
+		border-bottom: 1px solid #eee;
+		height: 20px;
+		line-height: 19px;
+		overflow: hidden;
+	}
+
+	.address-detail{
+		height: 40px;
+		line-height: 20px;
+		overflow: hidden;
+		margin-top: 5px;
+		color: #666;
+		word-break: break-all;
+	}
+
+	.address-opr{
+		visibility: hidden;
+		text-align: right;
+		.link{
+			margin-left: 10px;
+		}
+	}
+
+	
+}
+
+.address-add{
+	width: 210px;
+	float: left;
+	padding: 10px 20px;
+	border: 3px dashed #ccc;
+	margin: 20px 20px 0 20px;
+	cursor: pointer;
+
+	&:hover{
+		background: #eee;
+	}
+
+	.address-new{
+		text-align: center;
+		padding: 7px 0;
+		color: #ccc;
+		.fa{
+			font-size: 50px;
+			line-height: 50px;
+			
+		}
+
+		.text{
+			font-size: 12px;
+		}
+	}
+}
+/* 商品部分样式 */
+.prd-table{
+	width: 100%;
+	margin-top: 10px;
+	border-collapse: collapse;
+	td,th{
+		border-bottom: 1px dotted #ddd;
+	}
+	.cell-img{
+		padding: 10px;
+		width: 10%;
+		text-align: center;
+
+		.p-img{
+			width: 80px;
+			height: 80px;
+			border: 1px solid #ddd;
+		}
+		
+	}
+	
+	.cell-info{
+		width: 30%;
+		text-align: left;
+		
+	}
+	.cell-price{
+		width: 20%;
+		text-align: center;
+		
+	}
+	.cell-count{
+		width: 20%;
+		text-align: center;
+		
+	}
+	.cell-total{
+		width: 20%;
+		text-align: center;
+		
+	}
+	
+
+
+}
+
+/* 订单提交 */
+.sub-con{
+	background: #eee;
+	text-align: right;
+	span:first-child{
+		vertical-align: middle;
+	}
+
+	.submit-total{
+		font-size: 18px;
+		color: $orderTotalFontColor;
+		font-weight: 900;
+		vertical-align: middle;
+		margin-right: 20px;
+	}
+
+	.order-submit{
+		height: 50px;
+		line-height: 50px;
+		width: 110px;
+		text-align: center;
+	}
+}
+
+/* model部分 */
+.model{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #eee;
+	background: rgba(0,0,0,.4);
+	z-index: 1000;
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	.model-container{
+		width: 700px;
+		margin: 50px auto;
+		background-color: #fff;
+		border-radius: 2px;
+
+		.model-header{
+			position: relative;
+			padding: 15px;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.model-title{
+			font-size: 14px;
+		}
+
+		.close{
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			padding: 10px;
+			cursor: pointer;
+		}
+
+		.model-body{
+			padding: 15px;
+		}
+	}
+}
+
+/* form部分 */
+.form{
+	.form-line{
+		margin: 5px 0;
+		overflow: hidden;
+
+		.label{
+			display: block;
+			float: left;
+			width: 80px;
+			text-align: right;
+			height: 30px;
+			line-height: 30px;
+			margin-right: 10px;
+			cursor: pointer;
+		}
+
+		&.require::after{
+			content: '*';
+			font-size: 14px;
+			color: red;
+			position: absolute;
+			margin-top: 6px;
+			font-weight: 900;
+		}
+
+		.form-item{
+			padding: 0 5px;
+			height: 30px;
+			line-height: 26px;
+			outline: none;
+			margin-right: 10px;
+		}
+
+		.btn{
+			margin-left: 90px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 13px;
+		}
+	}
+
+	#receiver-city{
+		width: 81px;
+	}
+}

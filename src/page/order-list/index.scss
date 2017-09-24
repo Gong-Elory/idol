@@ -1,0 +1,78 @@
+.order-list-table{
+	width: 100%;
+	border-collapse: collapse;
+	background: #fafafa;
+	margin-bottom: 20px;
+
+	.cell{
+		padding: 10px 0;
+		color: #666;
+		border-bottom: 1px solid #eee;
+	}
+
+	.header{
+		background: #eee;
+	}
+
+	.order-info{
+		background: #eee;
+		padding: 10px;
+		color: #999;
+
+		.order-text{
+			margin-right: 25px;
+		}
+
+		.order-num{
+			font-weight: 900;
+		}
+
+		.order-total{
+			font-weight: 900;
+			color: #c60023;
+		}
+		.order-detail{
+			float: right;
+		}
+	}
+
+
+}
+
+
+/* 商品信息 */
+.order-list-table{
+	.cell-img{
+		padding: 10px;
+		width: 10%;
+		text-align: center;
+
+		.p-img{
+			width: 80px;
+			height: 80px;
+			border: 1px solid #ddd;
+		}
+		
+	}
+	
+	.cell-info{
+		width: 45%;
+		text-align: left;
+		
+	}
+	.cell-price{
+		width: 15%;
+		text-align: center;
+		
+	}
+	.cell-count{
+		width: 15%;
+		text-align: center;
+		
+	}
+	.cell-total{
+		width: 15%;
+		text-align: center;
+		
+	}
+}

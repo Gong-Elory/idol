@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%= require('html-loader!./layout/header-common.html') %>
+<title><%= htmlWebpackPlugin.options.title%> - IDOL</title>
+</head>
+<body>
+<%= require('html-loader!./layout/nav.html') %>	
+<%= require('html-loader!./layout/header.html') %>
+<div class="crumb">
+	<div class="wid">
+		<div class="crumb-con">
+			<a href="./index.html" class="link">IDOL</a>
+			<span>></span>
+			<span class="link-text"><%= htmlWebpackPlugin.options.title%></span>
+		</div>
+	</div>
+</div>
+<div class="page-wrap wid">
+	<%= require('html-loader!./layout/nav-side.html') %>
+	<div class="content with-nav">
+		<div class="panel">
+			<div class="panel-title"><%= htmlWebpackPlugin.options.title%></div>
+			<div class="panel-body">
+				<div class="order-list-con">
+				</div>
+				<div class="pagination">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<%= require('html-loader!./layout/footer-common.html') %>	
+</body>
+</html>
